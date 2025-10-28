@@ -14,3 +14,10 @@ def create_bool_matrix(size: int, fill: bool = False) -> list[list[bool]]:
 def in_bounds(size: int, x: int, y: int) -> bool:
     return 0 <= x < size and 0 <= x < size
 
+def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> int:
+    counter = 0
+    for i in range(len(shots)):
+        for j in range(len(shots)):
+            if ships[i][j] == 0 and shots[i][j]:
+                counter += 1
+    return counter  
