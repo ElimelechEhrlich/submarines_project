@@ -21,3 +21,8 @@ def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> in
             if ships[i][j] == 0 and shots[i][j]:
                 counter += 1
     return counter  
+
+def number_of_submarines(amount: int = None, size: int) -> int:
+    if amount == None:
+        amount = size*size/2
+    return
