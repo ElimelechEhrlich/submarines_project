@@ -8,7 +8,7 @@ def create_matrix(size: int, fill: int = 0) -> list[list[int]]:
     return ships
 
 def create_bool_matrix(size: int, fill: bool = False) -> list[list[bool]]:
-    shots = [[fill for i in range(size)] for i in range(size)]
+    shots = [[fill for i in range(size)] for j in range(size)]
     return shots
 
 def in_bounds(size: int, x: int, y: int) -> bool:
@@ -30,3 +30,16 @@ def check_number_of_submarines(size):
         amount = number_of_submarines()
     return amount
 
+def random_index(size):
+    num = random.randrange(range(len(size)))
+    return num
+
+def add_submarines_in_metrix(metrix: list[list[int]], submarines: int, size: int):
+    counter = submarines
+    while counter > 0:
+        x = random_index(size)
+        y = random_index(size)
+        if metrix[x][y] == False:
+            metrix[x][y] == True
+            counter -= 1
+    return metrix
