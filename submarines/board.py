@@ -23,10 +23,10 @@ def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> in
     return counter  
 
 def number_of_submarines() -> int:
-    amount = int(input('How many submarines? '))
-    return amount
+    return int(input('How many submarines? ')) 
 
 def check_number_of_submarines(size):
-    while number_of_submarines() > size*size or number_of_submarines() <= 0:
+    if number_of_submarines() > size*size or number_of_submarines() <= 0:
         amount = number_of_submarines()
     return amount
+
